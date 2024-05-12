@@ -11,16 +11,16 @@ namespace OOP
     {
         private Node _first { get; set; }
         private Node _last { get; set; }
-        private int _minNode { get; set; }
-        private int _maxNode { get; set; }
+        private Node _minNode { get; set; }
+        private Node _maxNode { get; set; }
 
 
         public LinkedList(Node first)
         {
             _first = first;
             _last = first;
-            _minNode = first.Value;
-            _maxNode = first.Value;
+            _minNode = first;
+            _maxNode = first;
         }
 
         //public bool hasNext()
@@ -42,8 +42,12 @@ namespace OOP
             Node position = _last;
             _last = newNode;
             position.Next = _last;
-            _minNode = Math.Min(newNode.Value,_minNode);
-            _maxNode = Math.Max(newNode.Value, _maxNode);
+            if (newNode.Value > _maxNode.Value)
+                _maxNode = newNode;
+            else if (newNode.Value < _minNode.Value)
+                _minNode = newNode;
+            //_minNode.Value = Math.Min(newNode.Value,_minNode.Value);
+            //_maxNode.Value = Math.Max(newNode.Value, _maxNode.Value);
         }
 
         public void Prepend(Node newNode)
@@ -51,8 +55,12 @@ namespace OOP
             Node position = _first;
             _first = newNode;
             _first.Next = position;
-            _minNode = Math.Min(newNode.Value, _minNode);
-            _maxNode = Math.Max(newNode.Value, _maxNode);
+            if(newNode.Value > _maxNode.Value)
+                _maxNode = newNode;
+            else if (newNode.Value < _minNode.Value)
+                _minNode = newNode;
+            //_minNode.Value = Math.Min(newNode.Value, _minNode.Value);
+            //_maxNode.Value = Math.Max(newNode.Value, _maxNode.Value);
         }
 
         public int[] SortedArr()
@@ -79,23 +87,38 @@ namespace OOP
         //    return value;
         //}
 
+
+        public Node findMaxNode()
+        {
+            Sort();
+            Node position = _first;
+            while(position.Next != null)
+            {
+                position = position.Next;
+            }
+            return position;
+        }
+
         public int Pop()
         {
             int value = _last.Value;
             Node position = _first;
-            Console.WriteLine("old max >>>" + _maxNode);
+            Console.WriteLine("old max >>>" + _maxNode.Value);
             while (position.Next!=_last)
             {
                 position = position.Next;
             }
             position.Next = null;
             _last = position;
-            if(value == _maxNode)
+            
+            if(value == _maxNode.Value)
             {
-                int[] arr = SortedArr();
-                _maxNode = arr[arr.Length-1];
+                _maxNode = findMaxNode();
+                Console.WriteLine("max >>" + _maxNode.Value);
+                //    int[] arr = SortedArr();
+                //    _maxNode = arr[arr.Length-1];
             }
-            Console.WriteLine("max >>" + _maxNode);
+            //Console.WriteLine("max >>" + _maxNode.Value);
             return value;
         }
 
@@ -103,15 +126,15 @@ namespace OOP
         {
             int value = _first.Value;
             _first = _first.Next;
-            Console.WriteLine("mmin:" + _minNode);
-            if (_minNode == value)
-            //{
-            //    Sort();
-            //    _minNode = _first.Value;
-            //    Console.WriteLine(_minNode);
-            //}
-            _minNode = SortedArr()[0];
-            Console.WriteLine("min:" + _minNode);
+            Console.WriteLine("mmin:" + _minNode.Value);
+            if (_minNode.Value == value)
+            {
+                Sort();
+                _minNode = _first;
+                Console.WriteLine("min>>>"+_minNode.Value);
+            }
+            //_minNode.Value = SortedArr()[0];
+            Console.WriteLine("min:" + _minNode.Value);
             return value;
 
         }
@@ -205,8 +228,15 @@ namespace OOP
         }
 
 
-        
+        public Node GetMaxNode()
+        {
+            return _maxNode;
+        }
 
+        public Node GetMinNode()
+        {
+            return _minNode;
+        }
 
 
         public void Print()

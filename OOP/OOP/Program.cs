@@ -22,6 +22,8 @@ namespace OOP
             Node n8 = new Node(11, null);
             Node n9 = new Node(111, null);
             Node n10 = new Node(-4, null);
+            Node n11 = new Node(121, null);
+            Node n12 = new Node(-8, null);
             //LinkedList<Node> l = new LinkedList<Node>();
             LinkedList l = new LinkedList(n);
             Console.WriteLine() ;
@@ -34,29 +36,51 @@ namespace OOP
             l.Prepend(n8);
             l.Append(n9);
             l.Prepend(n10);
+            l.Append(n11);
+            l.Prepend(n12);
             l.Print();
             //Console.WriteLine();
             //
             //l.Sort();
             //l.Print();
             //Console.WriteLine(l.Pop());
+            Console.WriteLine();
+            Console.WriteLine(l.GetMaxNode().Value);
+            Console.WriteLine(l.GetMinNode().Value);
+            Console.WriteLine();
+            l.Sort();
+            l.Print();
+            Console.WriteLine();
             l.Pop();
             l.Unqueue();
+            l.Pop();
+            l.Unqueue();
+            Console.WriteLine();
+            Console.WriteLine(l.GetMaxNode().Value);
+            Console.WriteLine(l.GetMinNode().Value);
+            Console.WriteLine();
             l.Print();
             
             //l.Append(n4);
             Console.WriteLine();
+
+            Node nn = l.findMaxNode();
+            Console.WriteLine("nn>>>>>"+  nn.Value);
+
+
+            //Console.WriteLine(l.GetMaxNode().Value);
+            //Console.WriteLine(l.GetMinNode().Value);
             //int x = l.Pop();
             //int y = l.Unqueue();
             //Console.WriteLine(l.IsCircular());
             //l.Print();
-            //l.Sort();
+            l.Sort();
             //for (int i = 0; i < arr.Length; i++)
             //{
             //    Console.WriteLine(arr[i]);
             //}
             //Console.WriteLine();
-            //l.Print();
+            l.Print();
 
             //Console.WriteLine( l.ToList());
 
