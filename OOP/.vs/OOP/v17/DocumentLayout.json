@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Roni\\Documents\\Project\\Part3\\OOP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CFECCB80-6297-433E-9DFA-CB69A0A6C962}|OOP\\OOP.csproj|c:\\users\\roni\\documents\\project\\part3\\oop\\oop\\linkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFECCB80-6297-433E-9DFA-CB69A0A6C962}|OOP\\OOP.csproj|solutionrelative:oop\\linkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFECCB80-6297-433E-9DFA-CB69A0A6C962}|OOP\\OOP.csproj|c:\\users\\roni\\documents\\project\\part3\\oop\\oop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFECCB80-6297-433E-9DFA-CB69A0A6C962}|OOP\\OOP.csproj|solutionrelative:oop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFECCB80-6297-433E-9DFA-CB69A0A6C962}|OOP\\OOP.csproj|c:\\users\\roni\\documents\\project\\part3\\oop\\oop\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFECCB80-6297-433E-9DFA-CB69A0A6C962}|OOP\\OOP.csproj|solutionrelative:oop\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Roni\\Desktop\\OLD_DESKTOP\\\u05E1\u05D9\u05E9\u05D0\u05E8\u05E4\\\u05E7\u05D1\u05E6\u05D9\u05DD \u05D8\u05DC\u05D9\u05D4\\\u05DE\u05DE\u05E9\u05E7\u05D9\u05DD\\Node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Roni\\Documents\\Project\\Part3\\Part3\\Part3\\Node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Roni\\Desktop\\OLD_DESKTOP\\\u05E1\u05D9\u05E9\u05D0\u05E8\u05E4\\\u05E7\u05D1\u05E6\u05D9\u05DD \u05D8\u05DC\u05D9\u05D4\\\u05DE\u05DE\u05E9\u05E7\u05D9\u05DD\\BinNode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LinkedList.cs",
+              "DocumentMoniker": "C:\\Users\\Roni\\Documents\\Project\\Part3\\OOP\\OOP\\LinkedList.cs",
+              "RelativeDocumentMoniker": "OOP\\LinkedList.cs",
+              "ToolTip": "C:\\Users\\Roni\\Documents\\Project\\Part3\\OOP\\OOP\\LinkedList.cs",
+              "RelativeToolTip": "OOP\\LinkedList.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAUwEMAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:31:15.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\Roni\\Desktop\\OLD_DESKTOP\\\u05E1\u05D9\u05E9\u05D0\u05E8\u05E4\\\u05E7\u05D1\u05E6\u05D9\u05DD \u05D8\u05DC\u05D9\u05D4\\\u05DE\u05DE\u05E9\u05E7\u05D9\u05DD\\Node.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\OLD_DESKTOP\\\u05E1\u05D9\u05E9\u05D0\u05E8\u05E4\\\u05E7\u05D1\u05E6\u05D9\u05DD \u05D8\u05DC\u05D9\u05D4\\\u05DE\u05DE\u05E9\u05E7\u05D9\u05DD\\Node.cs",
+              "ToolTip": "C:\\Users\\Roni\\Desktop\\OLD_DESKTOP\\\u05E1\u05D9\u05E9\u05D0\u05E8\u05E4\\\u05E7\u05D1\u05E6\u05D9\u05DD \u05D8\u05DC\u05D9\u05D4\\\u05DE\u05DE\u05E9\u05E7\u05D9\u05DD\\Node.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Desktop\\OLD_DESKTOP\\\u05E1\u05D9\u05E9\u05D0\u05E8\u05E4\\\u05E7\u05D1\u05E6\u05D9\u05DD \u05D8\u05DC\u05D9\u05D4\\\u05DE\u05DE\u05E9\u05E7\u05D9\u05DD\\Node.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:28:29.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\Roni\\Documents\\Project\\Part3\\Part3\\Part3\\Node.cs",
+              "RelativeDocumentMoniker": "..\\Part3\\Part3\\Node.cs",
+              "ToolTip": "C:\\Users\\Roni\\Documents\\Project\\Part3\\Part3\\Part3\\Node.cs",
+              "RelativeToolTip": "..\\Part3\\Part3\\Node.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:23:52.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\Roni\\Documents\\Project\\Part3\\OOP\\OOP\\Node.cs",
+              "RelativeDocumentMoniker": "OOP\\Node.cs",
+              "ToolTip": "C:\\Users\\Roni\\Documents\\Project\\Part3\\OOP\\OOP\\Node.cs",
+              "RelativeToolTip": "OOP\\Node.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:23:11.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Roni\\Documents\\Project\\Part3\\OOP\\OOP\\Program.cs",
+              "RelativeDocumentMoniker": "OOP\\Program.cs",
+              "ToolTip": "C:\\Users\\Roni\\Documents\\Project\\Part3\\OOP\\OOP\\Program.cs",
+              "RelativeToolTip": "OOP\\Program.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAwwCEAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:22:31.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BinNode.cs",
+              "DocumentMoniker": "C:\\Users\\Roni\\Desktop\\OLD_DESKTOP\\\u05E1\u05D9\u05E9\u05D0\u05E8\u05E4\\\u05E7\u05D1\u05E6\u05D9\u05DD \u05D8\u05DC\u05D9\u05D4\\\u05DE\u05DE\u05E9\u05E7\u05D9\u05DD\\BinNode.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\OLD_DESKTOP\\\u05E1\u05D9\u05E9\u05D0\u05E8\u05E4\\\u05E7\u05D1\u05E6\u05D9\u05DD \u05D8\u05DC\u05D9\u05D4\\\u05DE\u05DE\u05E9\u05E7\u05D9\u05DD\\BinNode.cs",
+              "ToolTip": "C:\\Users\\Roni\\Desktop\\OLD_DESKTOP\\\u05E1\u05D9\u05E9\u05D0\u05E8\u05E4\\\u05E7\u05D1\u05E6\u05D9\u05DD \u05D8\u05DC\u05D9\u05D4\\\u05DE\u05DE\u05E9\u05E7\u05D9\u05DD\\BinNode.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Desktop\\OLD_DESKTOP\\\u05E1\u05D9\u05E9\u05D0\u05E8\u05E4\\\u05E7\u05D1\u05E6\u05D9\u05DD \u05D8\u05DC\u05D9\u05D4\\\u05DE\u05DE\u05E9\u05E7\u05D9\u05DD\\BinNode.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:28:08.629Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
