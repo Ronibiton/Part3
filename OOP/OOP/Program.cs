@@ -21,6 +21,7 @@ namespace OOP
             Node n7 = new Node(9, null);
             Node n8 = new Node(11, null);
             Node n9 = new Node(111, null);
+            Node n10 = new Node(-4, null);
             //LinkedList<Node> l = new LinkedList<Node>();
             LinkedList l = new LinkedList(n);
             Console.WriteLine() ;
@@ -32,11 +33,19 @@ namespace OOP
             l.Append(n7);
             l.Prepend(n8);
             l.Append(n9);
+            l.Prepend(n10);
             l.Print();
-            Console.WriteLine();
-            Console.WriteLine(l.Pop());
-            //l.Append(n4);
             //Console.WriteLine();
+            //
+            //l.Sort();
+            //l.Print();
+            //Console.WriteLine(l.Pop());
+            l.Pop();
+            l.Unqueue();
+            l.Print();
+            
+            //l.Append(n4);
+            Console.WriteLine();
             //int x = l.Pop();
             //int y = l.Unqueue();
             //Console.WriteLine(l.IsCircular());
@@ -46,8 +55,8 @@ namespace OOP
             //{
             //    Console.WriteLine(arr[i]);
             //}
-            Console.WriteLine();
-            l.Print();
+            //Console.WriteLine();
+            //l.Print();
 
             //Console.WriteLine( l.ToList());
 

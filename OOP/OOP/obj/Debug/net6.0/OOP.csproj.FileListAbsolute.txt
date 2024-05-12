@@ -12,3 +12,4 @@ C:\Users\Roni\Documents\Project\Part3\OOP\OOP\obj\Debug\net6.0\refint\OOP.dll
 C:\Users\Roni\Documents\Project\Part3\OOP\OOP\obj\Debug\net6.0\OOP.pdb
 C:\Users\Roni\Documents\Project\Part3\OOP\OOP\obj\Debug\net6.0\OOP.genruntimeconfig.cache
 C:\Users\Roni\Documents\Project\Part3\OOP\OOP\obj\Debug\net6.0\ref\OOP.dll
+C:\Users\Roni\Documents\Project\Part3\OOP\OOP\obj\Debug\net6.0\OOP.sourcelink.json

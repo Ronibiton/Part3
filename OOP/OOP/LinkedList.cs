@@ -11,16 +11,16 @@ namespace OOP
     {
         private Node _first { get; set; }
         private Node _last { get; set; }
-        private int _minNode { get; set; }
-        private int _maxNode { get; set; }
+        private Node _minNode { get; set; }
+        private Node _maxNode { get; set; }
 
 
         public LinkedList(Node first)
         {
             _first = first;
             _last = first;
-            _minNode = first.Value;
-            _maxNode = first.Value;
+            _minNode = first;
+            _maxNode = first;
         }
 
         //public bool hasNext()
@@ -42,8 +42,8 @@ namespace OOP
             Node position = _last;
             _last = newNode;
             position.Next = _last;
-            _minNode = Math.Min(newNode.Value,_minNode);
-            _maxNode = Math.Max(newNode.Value, _maxNode);
+            _minNode.Value = Math.Min(newNode.Value,_minNode.Value);
+            _maxNode.Value = Math.Max(newNode.Value, _maxNode.Value);
         }
 
         public void Prepend(Node newNode)
@@ -51,42 +51,69 @@ namespace OOP
             Node position = _first;
             _first = newNode;
             _first.Next = position;
-            _minNode = Math.Min(newNode.Value, _minNode);
-            _maxNode = Math.Max(newNode.Value, _maxNode);
+            _minNode.Value = Math.Min(newNode.Value, _minNode.Value);
+            _maxNode.Value = Math.Max(newNode.Value, _maxNode.Value);
         }
+
+        public int[] SortedArr()
+        {
+            IEnumerable<int> values = ToList();
+            int[] arr = new int[values.Count()];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = values.ElementAt(i);
+            }
+            Array.Sort(arr);
+            return arr;
+        }
+
+
+        //public int Pop()
+        //{
+
+        //    Node position = _first;
+        //    while (position.Next.Next != null)
+        //        position = position.Next;
+        //    int value = position.Next.Value;
+        //    position.Next = null;
+        //    return value;
+        //}
 
         public int Pop()
         {
+            int value = _last.Value;
             Node position = _first;
-            while (position.Next.Next != null)
+            Console.WriteLine("old max >>>" + _maxNode.Value);
+            while (position.Next!=_last)
+            {
                 position = position.Next;
-            int value = position.Next.Value;
-            position.Next = position.Next.Next;
-            //if(_maxNode == value)
-            //{
-            //    Sort();
-            //    position = _first;
-            //    while (position.Next!=null)
-            //    {
-            //        _maxNode = position.Value;
-            //        Console.WriteLine(_maxNode);
-            //    }
-            //}
-            //if (_minNode == value)
+            }
+            position.Next = null;
+            _last = position;
+            if(value == _maxNode.Value)
+            {
+                int[] arr = SortedArr();
+                _maxNode.Value = arr[arr.Length-1];
+            }
+            Console.WriteLine("max >>" + _maxNode.Value);
+            return value;
+        }
+
+        public int Unqueue()
+        {
+            int value = _first.Value;
+            _first = _first.Next;
+            Console.WriteLine("mmin:" + _minNode.Value);
+            if (_minNode.Value == value)
             //{
             //    Sort();
             //    _minNode = _first.Value;
             //    Console.WriteLine(_minNode);
             //}
+            _minNode.Value = SortedArr()[0];
+            Console.WriteLine("min:" + _minNode.Value);
+            return value;
 
-            return value;
-        }
-        
-        public int Unqueue()
-        {
-            int value = _first.Value;
-            _first = _first.Next;
-            return value;
         }
 
 
@@ -135,17 +162,20 @@ namespace OOP
 
         public void Sort()
         {
-            IEnumerable<int> values = ToList();
-            int[] arr = new int[values.Count()];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = values.ElementAt(i);
-            }
-            Array.Sort(arr);
-            Node position = _first.Next;
-            Node prePosition = _first;
+            //IEnumerable<int> values = ToList();
+            //int[] arr = new int[values.Count()];
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    arr[i] = values.ElementAt(i);
+            //}
+            //Array.Sort(arr);
+            int[] arr = SortedArr();
+            //Node position = _first.Next;
+            //Node prePosition = _first;
             foreach(int num in arr)
             {
+                Node position = _first.Next;
+                Node prePosition = _first;
                 if (prePosition.Value == num)
                 {
                     Node node = prePosition;
@@ -169,10 +199,13 @@ namespace OOP
                         prePosition = prePosition.Next;
                     }
                 }
-                position = _first.Next;
-                prePosition = _first;
+                //position = _first.Next;
+                //prePosition = _first;
             }
         }
+
+
+        
 
 
 
