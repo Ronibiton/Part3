@@ -21,21 +21,7 @@ namespace OOP
             _last = first;
             _minNode = first;
             _maxNode = first;
-        }
-
-        //public bool hasNext()
-        //{
-        //    return _first.Next != null;
-
-        //}
-
-        //public void Append(Node newNode)
-        //{
-        //    Node position = _first;
-        //    while(position.Next!=null)
-        //        position = position.Next;
-        //    position.Next = newNode;
-        //}
+        }  
 
         public void Append(Node newNode)
         {
@@ -46,8 +32,6 @@ namespace OOP
                 _maxNode = newNode;
             else if (newNode.Value < _minNode.Value)
                 _minNode = newNode;
-            //_minNode.Value = Math.Min(newNode.Value,_minNode.Value);
-            //_maxNode.Value = Math.Max(newNode.Value, _maxNode.Value);
         }
 
         public void Prepend(Node newNode)
@@ -59,8 +43,6 @@ namespace OOP
                 _maxNode = newNode;
             else if (newNode.Value < _minNode.Value)
                 _minNode = newNode;
-            //_minNode.Value = Math.Min(newNode.Value, _minNode.Value);
-            //_maxNode.Value = Math.Max(newNode.Value, _maxNode.Value);
         }
 
         public int[] SortedArr()
@@ -74,18 +56,6 @@ namespace OOP
             Array.Sort(arr);
             return arr;
         }
-
-
-        //public int Pop()
-        //{
-
-        //    Node position = _first;
-        //    while (position.Next.Next != null)
-        //        position = position.Next;
-        //    int value = position.Next.Value;
-        //    position.Next = null;
-        //    return value;
-        //}
 
 
         public Node findMaxNode()
@@ -115,10 +85,7 @@ namespace OOP
             {
                 _maxNode = findMaxNode();
                 Console.WriteLine("max >>" + _maxNode.Value);
-                //    int[] arr = SortedArr();
-                //    _maxNode = arr[arr.Length-1];
             }
-            //Console.WriteLine("max >>" + _maxNode.Value);
             return value;
         }
 
@@ -133,24 +100,10 @@ namespace OOP
                 _minNode = _first;
                 Console.WriteLine("min>>>"+_minNode.Value);
             }
-            //_minNode.Value = SortedArr()[0];
             Console.WriteLine("min:" + _minNode.Value);
             return value;
 
         }
-
-
-        //public IEnumerable<int> ToList()
-        //{
-        //    Node position = _first;
-        //    while (position != null)
-        //    {
-        //        yield return position.Value;
-        //        position = position.Next;
-        //    }
-        //    yield break;
-        //}
-
 
         public IEnumerable<int> ToList()
         {
@@ -185,16 +138,7 @@ namespace OOP
 
         public void Sort()
         {
-            //IEnumerable<int> values = ToList();
-            //int[] arr = new int[values.Count()];
-            //for (int i = 0; i < arr.Length; i++)
-            //{
-            //    arr[i] = values.ElementAt(i);
-            //}
-            //Array.Sort(arr);
             int[] arr = SortedArr();
-            //Node position = _first.Next;
-            //Node prePosition = _first;
             foreach(int num in arr)
             {
                 Node position = _first.Next;
@@ -222,8 +166,6 @@ namespace OOP
                         prePosition = prePosition.Next;
                     }
                 }
-                //position = _first.Next;
-                //prePosition = _first;
             }
         }
 
@@ -251,14 +193,5 @@ namespace OOP
                 Console.WriteLine(position.Value);
         }
 
-        //public void print()
-        //{
-        //    Node position = _first;
-        //    while(position !=null)
-        //    {
-        //        Console.WriteLine(position.Value);
-        //        position = position.Next;
-        //    }
-        //}
     }
 }
