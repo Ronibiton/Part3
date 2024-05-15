@@ -8,14 +8,14 @@ namespace OOP
 {
     class NumericalExpression
     {
-        private long _number {  get; set; }
+        private long _number { get; set; }
 
         public NumericalExpression(long number)
         {
             _number = number;
         }
 
-        public string Units(string num)
+        private string Units(string num)
         {
             string number = num.ToString();
             switch (number)
@@ -44,7 +44,7 @@ namespace OOP
             return "Not a valid number";
         }
 
-        public string Tens(string number)
+        private string Tens(string number)
         {
             switch (number)
             {
@@ -73,7 +73,7 @@ namespace OOP
         }
 
 
-        public string MultiplesOf10(string number)
+        private string MultiplesOf10(string number)
         {
             switch (number)
             {
@@ -99,7 +99,7 @@ namespace OOP
             return "Not a valid number";
         }
 
-        public string LargeNumbers(long num)
+        private string LargeNumbers(long num)
         {
             string number = num.ToString();
             switch (number)
@@ -118,13 +118,13 @@ namespace OOP
             return "";
         }
 
-        public string[] SplitNumber(string number)
+        private string[] SplitNumber(string number)
         {
             string[] splitedNumber = number.Split(',');
             return splitedNumber;
         }
 
-        public string[] NumberAfterArrangement(string[] number)
+        private string[] NumberAfterArrangement(string[] number)
         {
             for (int i = 0; i < number.Length; i++)
             {
@@ -146,7 +146,7 @@ namespace OOP
             return number;
         }
 
-        public string Hundred(string number)
+        private string Hundred(string number)
         {
             string numberInWords = "";
             if (number == "")
@@ -176,7 +176,7 @@ namespace OOP
             return numberInWords;
         }
 
-        public string AddComma()
+        private string AddComma()
         {
             string number = _number.ToString();
             string newNumber = "";
@@ -193,10 +193,14 @@ namespace OOP
             return newNumber;
         }
 
-        public string ConvertNumber()
+        private string ConvertNumber()
         {
             string numberInWords = "";
             string number = AddComma();
+            if (number == "0")
+            {
+                return "Zero";
+            }
             string[] arrNumber = NumberAfterArrangement(SplitNumber(number));
             int arrLength = arrNumber.Length;
             if (arrLength == 1)
@@ -259,9 +263,27 @@ namespace OOP
             return numberInWords;
         }
 
+        public long GetValue()
+        {
+            return _number;
+        }
+
         public override string ToString()
         {
             return ConvertNumber();
+        }
+
+        public static int SumLetters(long number)
+        {
+            NumericalExpression num = new NumericalExpression(0);
+            int countLetters = 0;
+            for (int i = 0; i <= number; i++)
+            {
+                num = new NumericalExpression(i);
+                string numberWithoutSpaces = num.ToString().Replace(" ", "");
+                countLetters+= numberWithoutSpaces.Length;
+            }
+            return countLetters;
         }
     }
 }
