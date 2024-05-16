@@ -273,17 +273,34 @@ namespace OOP
             return ConvertNumber();
         }
 
-        public static int SumLetters(long number)
+
+        public static long SumLetters(long number)
         {
-            NumericalExpression num = new NumericalExpression(0);
-            int countLetters = 0;
-            for (int i = 0; i <= number; i++)
+            if (number < 0)
             {
-                num = new NumericalExpression(i);
-                string numberWithoutSpaces = num.ToString().Replace(" ", "");
-                countLetters+= numberWithoutSpaces.Length;
+                return 0;
             }
-            return countLetters;
+            NumericalExpression num = new NumericalExpression(number);
+            string numberWithoutSpaces = num.ToString().Replace(" ", "");
+            return numberWithoutSpaces.Length + SumLetters(number - 1);
         }
+
+
+        public static long SumLetters2(NumericalExpression number)
+        {
+            if(number.GetValue()<0)
+            {
+                return 0;
+            }
+            string numberWithoutSpaces = number.ToString().Replace(" ", "");
+            return numberWithoutSpaces.Length + SumLetters2(new NumericalExpression(number.GetValue()-1));
+        }
+
+        public static long SumLetters3(NumericalExpression number)
+        {
+            return SumLetters(number.GetValue());
+        }
+
+
     }
 }
