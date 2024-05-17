@@ -273,7 +273,13 @@ namespace OOP
             return ConvertNumber();
         }
 
-
+        //העקרון הבא לידי ביטוי הוא פולימורפיזם
+        //פולימורפיזם (עקרון הרב צורתיות) מאפשר הסתכלות על עצם אחד בכמה דרכים וההרצה תרוץ בהתאם לטיפוס עליו הוא עובד
+        //עקרון הפולימורפיזם מכיל בתוכו את 
+        //Overloading
+        //אשר מאפשר שיהיו שתי פונקציות באותה ההמחלקה בעלות אותו השם אך שמקבלות טיפוסים ופרמטרים שונים
+        //במילים אחרות פולימורפיזם סטטי
+        //בזמן הריצה של הקוד, על פי טיפוס הפרמטרים המועברים לפונקציה תבחר ותרוץ הפונקציה הנכונה
         public static long SumLetters(long number)
         {
             if (number < 0)
@@ -284,21 +290,14 @@ namespace OOP
             string numberWithoutSpaces = num.ToString().Replace(" ", "");
             return numberWithoutSpaces.Length + SumLetters(number - 1);
         }
-
-
-        public static long SumLetters2(NumericalExpression number)
+        public static long SumLetters(NumericalExpression number)
         {
             if(number.GetValue()<0)
             {
                 return 0;
             }
             string numberWithoutSpaces = number.ToString().Replace(" ", "");
-            return numberWithoutSpaces.Length + SumLetters2(new NumericalExpression(number.GetValue()-1));
-        }
-
-        public static long SumLetters3(NumericalExpression number)
-        {
-            return SumLetters(number.GetValue());
+            return numberWithoutSpaces.Length + SumLetters(new NumericalExpression(number.GetValue()-1));
         }
 
 

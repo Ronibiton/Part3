@@ -102,8 +102,8 @@ namespace OOP
             //Console.WriteLine(NumericalExpression.SumLetters(5));
             //Console.WriteLine(NumericalExpression.SumLetters2(new NumericalExpression(5)));
             Console.WriteLine(NumericalExpression.SumLetters(5));
-            Console.WriteLine(NumericalExpression.SumLetters2(new NumericalExpression(5)));
-            Console.WriteLine(NumericalExpression.SumLetters3(new NumericalExpression(5)));
+            Console.WriteLine(NumericalExpression.SumLetters(new NumericalExpression(5)));
+            
         }
     }
 }
