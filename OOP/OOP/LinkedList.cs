@@ -73,7 +73,6 @@ namespace OOP
         {
             int value = _last.Value;
             Node position = _first;
-            Console.WriteLine("old max >>>" + _maxNode.Value);
             while (position.Next!=_last)
             {
                 position = position.Next;
@@ -84,7 +83,6 @@ namespace OOP
             if(value == _maxNode.Value)
             {
                 _maxNode = findMaxNode();
-                Console.WriteLine("max >>" + _maxNode.Value);
             }
             return value;
         }
@@ -93,14 +91,11 @@ namespace OOP
         {
             int value = _first.Value;
             _first = _first.Next;
-            Console.WriteLine("mmin:" + _minNode.Value);
             if (_minNode.Value == value)
             {
                 Sort();
                 _minNode = _first;
-                Console.WriteLine("min>>>"+_minNode.Value);
             }
-            Console.WriteLine("min:" + _minNode.Value);
             return value;
 
         }
